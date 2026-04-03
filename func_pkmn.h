@@ -8,23 +8,23 @@ typedef struct {
     int ataque;
     int defensa;
     int velocidad;
-} Pokemon;
+} pokemon;
 
 
 // Funciones para manejo de memoria
-Pokemon * crearPokemon(char *nombre, char *tipo, int hp, int ataque, int defensa, int velocidad);
-void liberarEquipoPokemon(Pokemon *p);
-Pokemon * obtenerEquipoPokemon(int opcion[]);
-Pokemon * generarEnemigoAleatorio();
+pokemon * crear_pokemon(char *nombre, char *tipo, int hp, int ataque, int defensa, int velocidad);
+void liberar_equipo_pokemon(pokemon *p);
+pokemon * crear_equipo_pokemon();
+pokemon * generar_rival_aleatorio();
 
 
 // Funciones de display
-int seleccionarPokemon();
-void mostrarPokemon(Pokemon *p);
-int mostrarMenuAcciones(Pokemon *jugador, Pokemon *enemigo);
+int seleccionar_pokemon();
+void mostrar_pokemon(pokemon *p);
+int mostrar_menu_acciones(pokemon *jugador, pokemon *enemigo);
 
 
 // Combate
-int calcularDano(Pokemon *atacante, Pokemon *defensor);
-void aplicarDano(Pokemon *defensor, int dano);
-int combate(Pokemon *jugador, Pokemon *enemigo);
+int calcular_dano(pokemon *atacante, pokemon *defensor);
+void aplicar_dano(pokemon *defensor, int dano);
+int combate(pokemon *jugador, pokemon *enemigo);

@@ -17,7 +17,7 @@ int main() {
     // Selección del pokémon del jugador
     int seleccion;
     do {
-        seleccion = seleccionarPokemon();
+        seleccion = seleccionar_pokemon();
         if (seleccion < 1 || seleccion > 4) {
             printf("Opción inválida. Intenta de nuevo.\n");
         }
@@ -25,7 +25,7 @@ int main() {
     
     
     // Creamos la instancia del pokemon
-    Pokemon *mi_equipo = obtenerPokemon(seleccion);    
+    pokemon *mi_equipo = crear_equipo_pokemon();    
     printf("\n¡Felicidades! ¡Elegiste a %s!\n", mi_equipo->nombre);
     
 
@@ -34,7 +34,7 @@ int main() {
     int res = 0;
     while(jugar){
         // Creamos al equipo pokemon del rival
-        Pokemon *rival = generarRivalAleatorio();
+        pokemon *rival = generar_rival_aleatorio();
 
         printf("Tu rival sera: %s\n", rival->nombre);
         printf("Presiona Enter para comenzar el combate...");

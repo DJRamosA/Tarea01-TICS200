@@ -5,13 +5,13 @@
 #include "func_pkmn.h"
 
 // Devuelve un puntero de la clase pokemon con sus valores rellenado
-Pokemon * crearPokemon(char *nombre, char *tipo, int hp, int ataque, int defensa, int velocidad) {
+pokemon * crear_pokemon(char *nombre, char *tipo, int hp, int ataque, int defensa, int velocidad) {
     /*
     Cree su codigo acá
     */
 }
 
-void liberarEquipoPokemon(Pokemon *p){
+void liberar_equipo_pokemon(pokemon *p){
     /*
     Cree su codigo acá
     */
@@ -19,45 +19,46 @@ void liberarEquipoPokemon(Pokemon *p){
 
 
 // Función para obtener un pokémon según la selección
-Pokemon * obtenerEquipoPokemon(int opcion[]) {
+pokemon * crear_equipo_pokemon(){
     /*
     Esta funcion solo crea 1 pokemon por equipo, 
     modificar en caso de querer tener más de un pokemon en el equipo
     */
-    switch(opcion[0]) {
+    int eleccion;
+    scanf("%d", eleccion);
+    switch(eleccion) {
         case 1:
-            return crearPokemon("Charizard", "Fuego", 30, 12, 10, 11);
+            return crearpokemon("Charizard", "Fuego", 30, 12, 10, 11);
         case 2:
-            return crearPokemon("Blastoise", "Agua", 32, 11, 13, 10);
+            return crearpokemon("Blastoise", "Agua", 32, 11, 13, 10);
         case 3:
-            return crearPokemon("Venusaur", "Planta", 31, 10, 12, 11);
+            return crearpokemon("Venusaur", "Planta", 31, 10, 12, 11);
         case 4:
-            return crearPokemon("Pikachu", "Eléctrico", 25, 10, 8, 15);
+            return crearpokemon("Pikachu", "Eléctrico", 25, 10, 8, 15);
         
         //Ingrese más casos si desean
 
         default:
-            return crearPokemon("Charizard", "Fuego", 30, 12, 10, 11);
+            return crearpokemon("Charizard", "Fuego", 30, 12, 10, 11);
     }
 }
 
 
 // Función de selección de enemigo aleatorio
-Pokemon * generarRivalAleatorio() {
+pokemon * generar_rival_aleatorio(){
     /*
     Esta funcion solo crea 1 pokemon por equipo, 
     modificar en caso de querer tener más de un pokemon en el equipo
     */
     srand(time(NULL));
     int enemigo = (rand() % 4) + 1;
-    return obtenerEquipoPokemon(enemigo);
+    return obtenerEquipopokemon(enemigo);
 }
-
 
 // Funciones basicas --------------------------------------------------------------------------------
 
 // Función para mostrar el menú de selección
-int seleccionarPokemon() {
+int seleccionar_pokemon(){
     int opcion;
     printf("\n========== ELIGE TU POKÉMON ==========\n");
     printf("1. Charizard (Fuego) - Ataque: 12, Defensa: 10, Velocidad: 11\n");
@@ -75,7 +76,7 @@ int seleccionarPokemon() {
 }
 
 // Función para mostrar el estado de un pokémon
-void mostrarPokemon(Pokemon *p) {
+void mostrar_pokemon(pokemon *p){
     printf("\n%s (%s)\n", p->nombre, p->tipo);
     printf("HP: [");
     int barra_llena = (p->hp * 20) / p->hp_max;
@@ -90,11 +91,11 @@ void mostrarPokemon(Pokemon *p) {
 
 
 // Función para mostrar el menú de acciones
-int mostrarMenuAcciones(Pokemon *jugador, Pokemon *enemigo) {
+int mostrar_menu_acciones(pokemon *jugador, pokemon *enemigo){
     int accion;
     printf("\n--- Turno de %s ---\n", jugador->nombre);
-    mostrarPokemon(jugador);
-    mostrarPokemon(enemigo);
+    mostrarpokemon(jugador);
+    mostrarpokemon(enemigo);
     printf("\nOpciones:\n");
     printf("1. Atacar\n");
     printf("2. Defensa\n");;
@@ -112,14 +113,14 @@ int mostrarMenuAcciones(Pokemon *jugador, Pokemon *enemigo) {
 
 
 // Función para calcular el daño
-int calcularDano(Pokemon *atacante, Pokemon *defensor) {
+int calcular_dano(pokemon *atacante, pokemon *defensor){
     /*
     Cree su codigo acá
     */
 }
 
 
-void aplicarDano(Pokemon *defensor, int dano){
+void aplicar_dano(pokemon *defensor, int dano){
     /*
     Cree su codigo acá
     */
@@ -128,7 +129,7 @@ void aplicarDano(Pokemon *defensor, int dano){
 
 
 // Función para realizar el combate
-int combate(Pokemon *jugador, Pokemon *enemigo) {   
+int combate(pokemon *jugador, pokemon *enemigo){   
     /*
     Inserte aqui su codigo para combatir
     */
