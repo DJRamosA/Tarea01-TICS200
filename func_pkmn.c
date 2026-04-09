@@ -28,18 +28,18 @@ pokemon * crear_equipo_pokemon(){
     scanf("%d", eleccion);
     switch(eleccion) {
         case 1:
-            return crearpokemon("Charizard", "Fuego", 30, 12, 10, 11);
+            return crear_pokemon("Charizard", "Fuego", 30, 12, 10, 11);
         case 2:
-            return crearpokemon("Blastoise", "Agua", 32, 11, 13, 10);
+            return crear_pokemon("Blastoise", "Agua", 32, 11, 13, 10);
         case 3:
-            return crearpokemon("Venusaur", "Planta", 31, 10, 12, 11);
+            return crear_pokemon("Venusaur", "Planta", 31, 10, 12, 11);
         case 4:
-            return crearpokemon("Pikachu", "Eléctrico", 25, 10, 8, 15);
+            return crear_pokemon("Pikachu", "Eléctrico", 25, 10, 8, 15);
         
         //Ingrese más casos si desean
 
         default:
-            return crearpokemon("Charizard", "Fuego", 30, 12, 10, 11);
+            return crear_pokemon("Charizard", "Fuego", 30, 12, 10, 11);
     }
 }
 
@@ -94,8 +94,8 @@ void mostrar_pokemon(pokemon *p){
 int mostrar_menu_acciones(pokemon *jugador, pokemon *enemigo){
     int accion;
     printf("\n--- Turno de %s ---\n", jugador->nombre);
-    mostrarpokemon(jugador);
-    mostrarpokemon(enemigo);
+    mostrar_pokemon(jugador);
+    mostrar_pokemon(enemigo);
     printf("\nOpciones:\n");
     printf("1. Atacar\n");
     printf("2. Defensa\n");;
