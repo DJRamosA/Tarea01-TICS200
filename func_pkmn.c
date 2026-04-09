@@ -52,7 +52,7 @@ pokemon * generar_rival_aleatorio(){
     */
     srand(time(NULL));
     int enemigo = (rand() % 4) + 1;
-    return obtenerEquipopokemon(enemigo);
+    return crear_equipo_pokemon(enemigo);
 }
 
 // Funciones basicas --------------------------------------------------------------------------------
