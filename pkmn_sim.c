@@ -14,7 +14,8 @@ int main() {
     printf("|   SIMULADOR DE POKÉMON EN CONSOLA  |\n");
     printf("======================================\n");
     
-    // Selección del pokémon del jugador
+    // Prueba para selección de un pokemon. Esta invocación de función debe ir dentro de crear_equipo_pokemon()
+    /*
     int seleccion;
     do {
         seleccion = seleccionar_pokemon();
@@ -22,7 +23,7 @@ int main() {
             printf("Opción inválida. Intenta de nuevo.\n");
         }
     } while (seleccion < 1 || seleccion > 4);
-    
+    */
     
     // Creamos la instancia del pokemon
     pokemon *mi_equipo = crear_equipo_pokemon();    
