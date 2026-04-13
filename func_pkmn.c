@@ -25,7 +25,7 @@ pokemon * crear_equipo_pokemon(){
     modificar en caso de querer tener más de un pokemon en el equipo
     */
     int eleccion;
-    scanf("%d", eleccion);
+    scanf("%d", &eleccion);
     switch(eleccion) {
         case 1:
             return crear_pokemon("Charizard", "Fuego", 30, 12, 10, 11);
